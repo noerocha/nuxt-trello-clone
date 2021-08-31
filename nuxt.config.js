@@ -43,6 +43,31 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    [
+      '@nuxtjs/firebase',
+      {
+        config: {
+          apiKey: "AIzaSyAmZN7h-T48Wl2KOt7yDEDV02obvPrzCRo",
+          authDomain: "trello-clone-3a95a.firebaseapp.com",
+          projectId: "trello-clone-3a95a",
+          storageBucket: "trello-clone-3a95a.appspot.com",
+          messagingSenderId: "823920215850",
+          appId: "1:823920215850:web:9eb3efbee741075964c053"
+        },
+        services: {
+          auth: {
+            persistence: 'local', // default
+            initialize: {
+              onAuthStateChangedAction: 'onAuthStateChangedAction',
+              subscribeManually: false
+            },
+            ssr: false,
+          },
+          firestore: true,
+          storage: true
+        }
+      }
+    ]
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa

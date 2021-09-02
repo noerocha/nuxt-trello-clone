@@ -1,5 +1,6 @@
 # trello-clone
 Trello Clone using Nuxt
+
 Thanks to Gideon van der Merwe !
 ## Build Setup
 
